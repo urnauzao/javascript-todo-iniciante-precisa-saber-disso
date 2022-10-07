@@ -1,0 +1,33 @@
+<!-- Inclui um script JS -->
+<script type="text/javascript" src="header.js"></script>
+<script>
+    const objeto = {
+        'nome': "Dev Tech Tips Brasil",
+        link: "https://www.youtube.com/channel/UC_TXbxNKS3aU-_EwFcgCYjA",
+        "autor": "Urnau",
+        "inscritos": 478,
+        "jamais_escreva_assim_ta": true,
+        "lista_inscritos": [
+            "julio",
+            "ana",
+            "guilherme"
+        ]
+    }
+
+    objeto.ano = 2020;
+    document.write(JSON.stringify(objeto));
+    document.write("<hr>");
+    document.write(`
+        Ano: ${objeto.ano} | 
+        Ano: ${objeto['ano']} | 
+        Ano: ` + objeto.ano +
+        ' | Ano: ' + objeto['ano']);
+    document.write("<hr>");
+
+    document.write(`<p>Tipo do objeto ${typeof objeto}<p>`);
+    document.write(`<p>Tipo do objet.nome ${typeof objeto.nome}<p>`);
+    document.write(`<p>Tipo do objeto.lista_inscritos ${typeof objeto.lista_inscritos}<p>`);
+    document.write(`<p>objeto.lista_inscritos é uma lista? ${Array.isArray(objeto.lista_inscritos)}<p>`);
+    document.write(`<p>Tipo do objeto.inscritos ${typeof objeto.inscritos}<p>`);
+    document.write(`<p>Tipo do objeto.jamais_escreva_assim_ta ${typeof objeto.jamais_escreva_assim_ta}<p>`);
+</script>

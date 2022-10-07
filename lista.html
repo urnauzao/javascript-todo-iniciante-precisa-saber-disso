@@ -1,0 +1,80 @@
+<!-- Inclui um script JS -->
+<script type="text/javascript" src="header.js"></script>
+<script>
+    const lista = [
+        "sapato",
+        "camiseta polo",
+        "calça jeans"
+    ];
+    document.write(`<p> 3 Items: ${lista}</p >`);
+
+    document.write("<hr>");
+
+    lista.push("meia socket");
+    let adicionar_este_item = "boné";
+    lista.push(adicionar_este_item);
+    document.write(`<p> 5 Items: ${lista}</p >`);
+
+    document.write("<hr>");
+
+    // tentando alterar o valor de uma const
+    try {
+        // variaval_escopo_de_bloco_nao_mutavel = "qualquer coisa";
+        lista = 10;
+    } catch (error) {
+        document.write(`<p>ERRO - Tentando alterar a lista para 10</p >`);
+    }
+
+    document.write("<hr>");
+
+    try {
+        // variaval_escopo_de_bloco_nao_mutavel = "qualquer coisa";
+        lista = { 'numero': 10 };
+        document.write(`<p> 5 Items: ${lista}</p >`);
+    } catch (error) {
+        document.write(`<p>ERRO - Tentando alterar a lista para um outro objeto</p >`);
+    }
+
+    document.write("<hr>");
+
+    // editando a lista
+    let lista_reduce = lista.reduce(
+        (retorno, item) => {
+            return retorno + " | " + item.toUpperCase().slice(0, 3);
+        }
+        , "Itens");
+
+    document.write(lista_reduce);
+
+    document.write("<hr>");
+
+    // adaptando a lista com sua posição
+    let lista_map = lista.map((item, key) => {
+        return (key + 1) + " - " + item;
+    });
+
+    document.write(lista_map.join(" ## "));
+
+    document.write("<hr>");
+
+    // tudo que começa com CA
+    let lista_filter = lista.filter((item, key) => {
+        return item.slice(0, 2) === 'ca'; //true ou false
+    });
+
+    document.write(lista_filter.join(" && "));
+
+    document.write("<hr>");
+
+    let objeto_exemplo = { nome: "urnau", canal: 'dev tech tips' };
+    let lista_exemplo = ['urnau', 'dev', 'tech', 'tips'];
+    if (Array.isArray(objeto_exemplo)) {
+        document.write("objeto_exemplo é um array");
+        document.write("<hr>");
+    }
+
+    if (Array.isArray(lista_exemplo)) {
+        document.write("lista_exemplo é um array");
+        document.write("<hr>");
+    }
+</script>

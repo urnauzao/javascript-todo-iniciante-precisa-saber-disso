@@ -1,0 +1,37 @@
+<!-- Inclui um script JS -->
+<script type="text/javascript" src="header.js"></script>
+<script>
+    let x;
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+
+    document.write("<hr>");
+
+    x = null;
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+
+    document.write("<hr>");
+
+    x = undefined;
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+
+    document.write("<hr>");
+
+    x = "";
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+
+    document.write("<hr>");
+
+    x = 0;
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+
+    document.write("<hr>");
+
+    x = '0';
+    document.write(x || "1vazio", "<br>");
+    document.write(x ?? "2vazio", "<br>");
+</script>

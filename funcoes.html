@@ -1,0 +1,49 @@
+<!-- Inclui um script JS -->
+<script type="text/javascript" src="header.js"></script>
+<script>
+    const funcao1 = () => {
+        document.write(`<p>Valor1 qualquer coisa<p>`);
+    }
+    let funcao2 = () => {
+        document.write(`<p>Valor2 qualquer coisa<p>`);
+    }
+    var funcao3 = () => {
+        document.write(`<p>Valor3 qualquer coisa<p>`);
+    }
+    function funcao4() {
+        document.write(`<p>Valor4 qualquer coisa<p>`);
+    }
+
+    function funcao5() {
+        //closure
+        return () => {
+            document.write(`<p>Valor5 qualquer coisa<p>`);
+        }
+    };
+
+    const funcao6 = x => {
+        document.write(`<p>Valor6 ${x}<p>`);
+    }
+
+    const funcao7 = (x, y) => {
+        document.write(`<p>Valor7 ${x}, ${y}<p>`);
+    }
+    function funcao8(x = "xzao", y) {
+        document.write(`<p>Valor8 ${x}, ${y}<p>`);
+    }
+    function funcao9({ nome }) {
+        document.write(`<p>Valor9 ${nome}<p>`);
+    }
+
+    funcao1();
+    funcao2();
+    funcao3();
+    funcao4();
+    funcao5()();
+    funcao6();
+    funcao7(1, 2);
+    funcao8(null, 10);
+    funcao9({ titulo: "Alfa", "nome": "Urnau" });
+
+
+</script>

@@ -1,0 +1,93 @@
+<!-- Inclui um script JS -->
+<script type="text/javascript" src="header.js"></script>
+<script>
+
+    let variaval_escopo_de_bloco_mutavel = "Tipo Let";
+    var variaval_escopo_global_mutavel = "Tipo Var";
+    const variaval_escopo_de_bloco_nao_mutavel = "Tipo Const";
+
+    document.write("<p>1 - variaval_escopo_de_bloco_mutavel: <strong>" + variaval_escopo_de_bloco_mutavel + "</strong></p>");
+    document.write("<p>2 - variaval_escopo_global_mutavel: <strong>" + variaval_escopo_global_mutavel + "</strong></p>")
+    document.write("<p>3 - variaval_escopo_de_bloco_nao_mutavel: <strong>" + variaval_escopo_de_bloco_nao_mutavel + "</strong></p>")
+
+    // separador
+    document.write("<hr>");
+
+    try {
+        let variaval_escopo_de_bloco_mutavel = "Alterado com sucesso o Tipo Let";
+        document.write("<p>4 - variaval_escopo_de_bloco_mutavel: <strong>" + variaval_escopo_de_bloco_mutavel + "</strong></p>");
+    } catch (error) {
+        document.write("<p>4 - variaval_escopo_de_bloco_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+
+    try {
+        variaval_escopo_global_mutavel = "Alterado com sucesso o Tipo Var";
+        document.write("<p>5 - variaval_escopo_global_mutavel: <strong>" + variaval_escopo_global_mutavel + "</strong></p>")
+    } catch (error) {
+        document.write("<p>5 - variaval_escopo_global_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+
+    try {
+        variaval_escopo_de_bloco_nao_mutavel = "Alterado com sucesso o Tipo Const";
+        document.write("<p>6 - variaval_escopo_de_bloco_nao_mutavel: <strong>" + variaval_escopo_de_bloco_nao_mutavel + "</strong></p>")
+    } catch (error) {
+        document.write("<p>6 - variaval_escopo_de_bloco_nao_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+
+    // separador
+    document.write("<hr>");
+
+    try {
+        let variaval_escopo_de_bloco_mutavel = "novo let";
+        document.write("<p>7 - variaval_escopo_de_bloco_mutavel: <strong>" + variaval_escopo_de_bloco_mutavel + "</strong></p>")
+    } catch (error) {
+        document.write("<p>7 - variaval_escopo_de_bloco_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+    try {
+        var variaval_escopo_global_mutavel = "novo var";
+        document.write("<p>8 - variaval_escopo_global_mutavel: <strong>" + variaval_escopo_global_mutavel + "</strong></p>")
+    } catch (error) {
+        document.write("<p>8 - variaval_escopo_global_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+    try {
+        const variaval_escopo_de_bloco_nao_mutavel = "novo const";
+        document.write("<p>9 - variaval_escopo_de_bloco_nao_mutavel: <strong>" + variaval_escopo_de_bloco_nao_mutavel + "</strong></p>")
+    } catch (error) {
+        document.write("<p>9 - variaval_escopo_de_bloco_nao_mutavel: <strong style='color:red'>" + error + "</strong></p>")
+    }
+
+    // separador
+    document.write("<hr>");
+
+    function teste() {
+        let let_dentro_da_funcao = "let_dentro_da_funcao";
+        var var_dentro_da_funcao = "var_dentro_da_funcao";
+        const const_dentro_da_funcao = "const_dentro_da_funcao";
+        document.write('10 | ', let_dentro_da_funcao, " | ", var_dentro_da_funcao, " | ", const_dentro_da_funcao);
+    }
+    teste();
+
+    // separador
+    document.write("<hr>");
+
+    try {
+        document.write("<p>11 - let_dentro_da_funcao: <strong>" + let_dentro_da_funcao + "</strong></p>")
+    } catch (error) {
+        document.write("<p>11 - let_dentro_da_funcao: <strong style='color:red'>" + error + "</strong></p>")
+    }
+    try {
+        document.write("<p>12 - var_dentro_da_funcao: <strong>" + var_dentro_da_funcao + "</strong></p>")
+    } catch (error) {
+        document.write("<p>12 - var_dentro_da_funcao: <strong style='color:red'>" + error + "</strong></p>")
+    }
+    try {
+        document.write("<p>13 - const_dentro_da_funcao: <strong>" + const_dentro_da_funcao + "</strong></p>")
+    } catch (error) {
+        document.write("<p>13 - const_dentro_da_funcao: <strong style='color:red'>" + error + "</strong></p>")
+    }
+
+    // separador
+    document.write("<hr>");
+
+
+</script>
